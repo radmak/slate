@@ -26,6 +26,7 @@ ready do
   require './lib/multilang.rb'
 end
 
+
 activate :sprockets
 
 activate :autoprefixer do |config|
