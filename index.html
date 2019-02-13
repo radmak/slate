@@ -234,12 +234,14 @@
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
-<p>Welcome to People API! You can use our API to access People API endpoints and get personal information of people from our database.</p>
+<p>Welcome to People API! You can use this API to access People API endpoints and get information of people from our database.</p>
 <h1 id='authentication'>Authentication</h1>
 <p>This is a public API and does not require any API key for authentication.</p>
 <h1 id='people'>People</h1><h2 id='getall'>GetAll</h2>
-<p>Returns an array of personal information of all people.</p>
-
+<p>Returns an array of information of all people.</p>
+<h3 id='request'>Request</h3>
+<p>There is no payload for a <b> GetAll </b> request.</p>
+<h3 id='response'>Response</h3>
 <blockquote>
 <p>JSON:</p>
 </blockquote>
@@ -248,18 +250,63 @@
     </span><span class="s2">"Id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
     </span><span class="s2">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mahesh"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"Occupation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IT"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Contact"</span><span class="p">:</span><span class="w"> </span><span class="mi">9876543210</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Contact"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9876543210"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"Address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Paud Road, Pune"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"Guid"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="s2">"UDID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0e3f9a93-7f29-4d2a-a371-d30c019c8667"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"APKversion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.2"</span><span class="w">
   </span><span class="p">}</span><span class="w">  
 </span><span class="p">]</span><span class="w">
-</span></code></pre><h3 id='query-parameters'>Query Parameters</h3>
-<p>This endpoint does not require any query parameters.</p>
+</span></code></pre>
+<table><thead>
+<tr>
+<th>Key</th>
+<th>Value</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Id</td>
+<td><b>long.</b> The ID of this person.</td>
+</tr>
+<tr>
+<td>Name</td>
+<td><b>string.</b> The name of this person.</td>
+</tr>
+<tr>
+<td>Occupation</td>
+<td><b>string.</b> The occupation of this person.</td>
+</tr>
+<tr>
+<td>Contact</td>
+<td><b>string.</b> The contact details of this person, generally a mobile number.</td>
+</tr>
+<tr>
+<td>Address</td>
+<td><b>string.</b> The Address of this person.</td>
+</tr>
+<tr>
+<td>Guid</td>
+<td><b>string.</b> A globally unique identifier of the application installed on the machine of this person.</td>
+</tr>
+<tr>
+<td>UDID</td>
+<td><b>string.</b> A unique identifier of the device of this person.</td>
+</tr>
+<tr>
+<td>APKversion</td>
+<td><b>string.</b> The version of the software installed on the device of this person.</td>
+</tr>
+</tbody></table>
 <h2 id='getpeople'>GetPeople</h2>
-<p>Retrieves personal information of a specific person.</p>
-<h3 id='request'>Request</h3>
+<p>Retrieves information of a specific person.</p>
+<h3 id='request-2'>Request</h3>
+<blockquote>
+<p>JSON:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"Id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">  
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
 <table><thead>
 <tr>
 <th>Key</th>
@@ -271,14 +318,21 @@
 <td><b>integer.</b> The ID of the person whose information is to be retrieved.</td>
 </tr>
 </tbody></table>
-
+<h3 id='response-2'>Response</h3>
 <blockquote>
 <p>JSON:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"Id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">  
-</span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='response'>Response</h3>
+<pre class="highlight json tab-json"><code><span class="w">  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"Id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mahesh"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Occupation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IT"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Contact"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9876543210"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Paud Road, Pune"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Guid"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"UDID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0e3f9a93-7f29-4d2a-a371-d30c019c8667"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"APKversion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.2"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span></code></pre>
 <table><thead>
 <tr>
 <th>Key</th>
@@ -319,20 +373,6 @@
 </tr>
 </tbody></table>
 
-<blockquote>
-<p>JSON:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="w">  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"Id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mahesh"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Occupation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IT"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Contact"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9876543210"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Paud Road, Pune"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Guid"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"UDID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0e3f9a93-7f29-4d2a-a371-d30c019c8667"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"APKversion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.2"</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span></code></pre>
       </div>
       <div class="dark-box">
       </div>
